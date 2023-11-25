@@ -1,8 +1,25 @@
-# React + Vite
+# Gif Expert App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple application made with React to learn how to use it with more detail, to improve knowledge and little by little to be a frontend web developer.
 
-Currently, two official plugins are available:
+## Features
+- Find gif by a word or words, retrieve 10 gifs
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack
+- Custom hooks
+- Fetch api
+- Communication between components
+- CSS
+- React
+- Javascript
+- Props
+
+### Requirements to run the project
+- Yarn need to be installed
+- Node need to be installed
+- Yarn install to install all dependencies 
+- Internet connection
+- Yarn dev
+
+## Sections - Screenshots
+<img src="https://raw.githubusercontent.com/Bikcodeh/GifExpertApp/main/aasets/app.png" width="300" />
