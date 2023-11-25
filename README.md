@@ -22,4 +22,4 @@ This is a simple application made with React to learn how to use it with more de
 - Yarn dev
 
 ## Sections - Screenshots
-<img src="https://raw.githubusercontent.com/Bikcodeh/GifExpertApp/main/aasets/app.png" width="300" />
+<img src="https://raw.githubusercontent.com/Bikcodeh/GifExpertApp/main/aasets/app.png" />
