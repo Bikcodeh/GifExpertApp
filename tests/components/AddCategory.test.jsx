@@ -7,4 +7,14 @@ describe('Add Category tests', () => {
         fireEvent.input(input, { target: { value: 'Saitama' }});
         expect(input.placeholder).toBe('Search gifs');
      })
+
+     test('should fire onSubmit', () => { 
+        const inputValue = "Saitama";
+        render(<AddCategory onNewCategory={ () => {}} />)
+        const input = screen.getByRole('textbox');
+        const form = screen.getByRole('form');
+        fireEvent.input(input, { target: { value: inputValue }});
+        fireEvent.submit(form);
+        expect(input.value).toBe('');
+      })
 });
