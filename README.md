@@ -13,6 +13,8 @@ This is a simple application made with React to learn how to use it with more de
 - React
 - Javascript
 - Props
+- Jest
+- React testing library
 
 ### Requirements to run the project
 - Yarn need to be installed
@@ -20,6 +22,7 @@ This is a simple application made with React to learn how to use it with more de
 - Yarn install to install all dependencies 
 - Internet connection
 - Yarn dev
+- Yarn test to run all the unit tests
 
 ## Sections - Screenshots
 <img src="https://raw.githubusercontent.com/Bikcodeh/GifExpertApp/main/aasets/app.png" />
