@@ -2,6 +2,8 @@
 
 This is a simple application made with React to learn how to use it with more detail, to improve knowledge and little by little to be a frontend web developer.
 
+App deployed: https://bikcodeh.github.io/GifExpertApp/
+
 ## Features
 - Find gif by a word or words, retrieve 10 gifs
 
