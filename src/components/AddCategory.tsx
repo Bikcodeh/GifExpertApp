@@ -1,13 +1,16 @@
-import { useState } from "react";
-import PropTypes from 'prop-types';
+import { ChangeEvent, FormEvent, useState } from "react";
 
-export const AddCategory = ({ onNewCategory }) => {
+interface Props {
+  onNewCategory: (text: string) => void;
+}
+
+export const AddCategory = ({ onNewCategory }: Props) => {
   const [inputValue, setInputValue] = useState("");
-  const onInputChange = ({ target }) => {
-    setInputValue(target.value);
+  const onInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setInputValue(event.target.value);
   };
 
-  const onSubmitForm = (event) => {
+  const onSubmitForm = (event: FormEvent<HTMLFormElement>) => {
     if(inputValue.length <= 1) return;
     onNewCategory(inputValue);
     setInputValue("");
@@ -24,8 +27,4 @@ export const AddCategory = ({ onNewCategory }) => {
       />
     </form>
   );
-};
-
-AddCategory.propTypes = {
-  onNewCategory: PropTypes.func
 };

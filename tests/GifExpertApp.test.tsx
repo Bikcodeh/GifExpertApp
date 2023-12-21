@@ -1,13 +1,15 @@
+import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import GifExpertApp from '../src/GifExpertApp';
 import { useFetchGifs } from '../src/hooks/useFetchGifs';
+import { GifInfo } from '../src/interfaces';
 
 jest.mock("../src/hooks/useFetchGifs");
 
 describe('Tests for GifExpertApp', () => { 
 
     test('should show items after initialized', () => { 
-        const gifs = [
+        const gifs: GifInfo[] = [
             {
                 id: "BAC",
                 title: "test",
@@ -18,9 +20,9 @@ describe('Tests for GifExpertApp', () => {
                 title: "test",
                 url: "https://imagen.jpg"
             }
-        ]
-        useFetchGifs.mockReturnValue({
-            images: gifs,
+        ];
+        (useFetchGifs as jest.Mock).mockReturnValue({
+            gifs: gifs,
             isLoading: false
         });
         render(<GifExpertApp />);
@@ -34,7 +36,7 @@ describe('Tests for GifExpertApp', () => {
 
 
     test('should not add repeated category', () => { 
-        const gifs = [
+        const gifs: GifInfo[] = [
             {
                 id: "BAC",
                 title: "test",
@@ -45,9 +47,9 @@ describe('Tests for GifExpertApp', () => {
                 title: "test",
                 url: "https://imagen.jpg"
             }
-        ]
-        useFetchGifs.mockReturnValue({
-            images: gifs,
+        ];
+        (useFetchGifs as jest.Mock).mockReturnValue({
+            gifs: gifs,
             isLoading: false
         });
         render(<GifExpertApp />);
@@ -64,7 +66,7 @@ describe('Tests for GifExpertApp', () => {
 
 
     test('should add new repeated category', () => { 
-        const gifs = [
+        const gifs: GifInfo[] = [
             {
                 id: "BAC",
                 title: "test",
@@ -75,9 +77,9 @@ describe('Tests for GifExpertApp', () => {
                 title: "test",
                 url: "https://imagen.jpg"
             }
-        ]
-        useFetchGifs.mockReturnValue({
-            images: gifs,
+        ];
+        (useFetchGifs as jest.Mock).mockReturnValue({
+            gifs: gifs,
             isLoading: false
         });
         render(<GifExpertApp />);

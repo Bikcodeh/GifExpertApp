@@ -1,14 +1,16 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { GifGrid } from '../../src/components/GifGrid';
 import { useFetchGifs } from '../../src/hooks/useFetchGifs';
+import { GifInfo } from '../../src/interfaces';
 
 jest.mock("../../src/hooks/useFetchGifs");
 
 describe('Tests for GifGrid', () => { 
     const category = "One punch";
     test('should show loading when initial state', () => {
-        useFetchGifs.mockReturnValue({
-            images: [],
+        (useFetchGifs as jest.Mock).mockReturnValue({
+            gifs: [],
             isLoading: true
         });
         render(<GifGrid category={category} />)
@@ -17,7 +19,7 @@ describe('Tests for GifGrid', () => {
      });
 
      test('should show items when images are retrieve from api', () => { 
-        const gifs = [
+        const gifs: GifInfo[] = [
             {
                 id: "BAC",
                 title: "test",
@@ -28,9 +30,9 @@ describe('Tests for GifGrid', () => {
                 title: "test",
                 url: "https://imagen.jpg"
             }
-        ]
-        useFetchGifs.mockReturnValue({
-            images: gifs,
+        ];
+        (useFetchGifs as jest.Mock).mockReturnValue({
+            gifs: gifs,
             isLoading: false
         });
         render(<GifGrid category={category} />)

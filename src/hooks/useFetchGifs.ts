@@ -1,14 +1,15 @@
+import { GifInfo } from './../interfaces/index';
 
 import { useState, useEffect } from 'react';
 import { getGifs } from '../helpers/getGifs';
 
-export const useFetchGifs = (category) => {
-    const [images, setImages] = useState([]);
+export const useFetchGifs = (category: string) => {
+    const [gifs, setGifs] = useState<GifInfo[]>([]);
     const [isLoading, setIsLoading] = useState(true);
 
     const getImages = async () => {
-        const newImages = await getGifs(category);
-        setImages(newImages);
+        const newGifs = await getGifs(category);
+        setGifs(newGifs);
         setIsLoading(false);
     };
     useEffect(() => {
@@ -16,6 +17,6 @@ export const useFetchGifs = (category) => {
     }, []);
     return {
         isLoading,
-        images
+        gifs
     };
 }

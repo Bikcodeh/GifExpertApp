@@ -6,11 +6,11 @@ exports[`GigGridItem Test Match with snapshot 1`] = `
     class="card"
   >
     <img
-      alt="Saitama"
+      alt="sdsada"
       src="http://one-punch.com/saitama.jpg"
     />
     <p>
-      Saitama
+      sdsada
     </p>
   </div>
 </div>
