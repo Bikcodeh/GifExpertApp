@@ -61,7 +61,6 @@ describe('Tests for GifExpertApp', () => {
         fireEvent.input(input, { target: { value: "Saitama" } });
         fireEvent.submit(form);
         expect(categories.length).toBe(2);
-        screen.debug()
      });
 
 
